@@ -1,0 +1,12 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon -L app/bin/www"
+  },
+  "dependencies": {
+    "express": "~4.9.0",
+    "redis": "~0.12.1",
+    "sockjs": "^0.3.15"
+  }
+}

@@ -1,0 +1,28 @@
+nginx:
+  build: ./nginx
+  links:
+    - app1:app1
+    - app2:app2
+    - app3:app3
+  ports:
+    - "80:80"
+app1:
+  build: .
+  volumes:
+    - "./app:/src/app"
+  links:
+    - "db:redis"
+app2:
+  build: .
+  volumes:
+    - "./app:/src/app"
+  links:
+    - "db:redis"
+app3:
+  build: .
+  volumes:
+    - "./app:/src/app"
+  links:
+    - "db:redis"
+db:
+  image: redis
