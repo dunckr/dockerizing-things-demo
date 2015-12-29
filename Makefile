@@ -15,7 +15,7 @@ status:
 	@docker-compose logs
 
 cli:
-	@docker-compose run --rm web bash
+	@docker-compose run --rm app1 bash
 
 restart:
 	@docker-compose stop

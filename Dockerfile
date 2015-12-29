@@ -1,5 +1,6 @@
-FROM node:0.10.38
+FROM node:5.3
 
+RUN apt-get update
 RUN mkdir /src
 
 RUN npm install nodemon -g
